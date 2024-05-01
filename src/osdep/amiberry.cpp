@@ -663,7 +663,7 @@ static void setmouseactive2(struct AmigaMonitor* mon, int active, bool allowpaus
 #if MOUSECLIP_HIDE
 			set_showcursor(FALSE);
 #endif
-			SDL_SetWindowGrab(mon->sdl_window, SDL_TRUE);
+			//SDL_SetWindowGrab(mon->sdl_window, SDL_TRUE);
 			// SDL2 hides the cursor when Relative mode is enabled
 			// This means that the RTG hardware sprite will no longer be shown,
 			// unless it's configured to use Virtual Mouse (absolute movement).
@@ -673,7 +673,7 @@ static void setmouseactive2(struct AmigaMonitor* mon, int active, bool allowpaus
 			updatewinrect(mon, false);
 			mon_cursorclipped = mon->monitor_id + 1;
 			updatemouseclip(mon);
-			setcursor(mon, -30000, -30000);
+			//setcursor(mon, -30000, -30000);
 		}
 		if (lastmouseactive != mouseactive) {
 			wait_keyrelease();
