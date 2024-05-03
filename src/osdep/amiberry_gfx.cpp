@@ -1790,7 +1790,9 @@ bool render_screen(int monid, int mode, bool immediate)
 
 void show_screen(int monid, int mode)
 {
+#ifndef USE_OPENGL
 	struct AmigaMonitor* mon = &AMonitors[monid];
+#endif
 	struct amigadisplay* ad = &adisplays[monid];
 	bool rtg = ad->picasso_on;
 
