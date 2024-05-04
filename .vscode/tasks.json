@@ -3,10 +3,11 @@
 	"tasks": [
 		{
 			"type": "shell",
-			"label": "make",
+			"label": "make debug",
 			"command": "make",
 			"args": [
 				"DEBUG=1",
+				"USE_OPENGL=1",
 				"-j8",
 				"PLATFORM=x86-64"
 			],
@@ -16,6 +17,23 @@
 			"group": {
 				"kind": "build",
 				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "make release",
+			"command": "make",
+			"args": [
+				"USE_OPENGL=1",
+				"-j8",
+				"PLATFORM=x86-64"
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
 			}
 		},
 		{
