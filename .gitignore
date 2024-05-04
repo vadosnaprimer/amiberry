@@ -3,6 +3,7 @@
 ### Amiberry files ###
 conf/*.uae
 conf/*.conf
+conf/*.backup
 kickstarts/*.rom
 kickstarts/*.key
 /amiberry*
@@ -206,6 +207,7 @@ Thumbs.db
 *.TMP
 *.npa00*
 *.tlog
+*.ini
 
 
 .com.apple.timemachine.supported
