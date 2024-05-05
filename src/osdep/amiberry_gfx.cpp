@@ -900,7 +900,7 @@ static void open_screen(struct uae_prefs* p)
 		}
 
 #ifdef USE_OPENGL
-		// TODO Rotation in OpenGL
+		glViewport(0, 0, width, height);
 #else
 		if (amiberry_options.rotation_angle == 0 || amiberry_options.rotation_angle == 180)
 		{
